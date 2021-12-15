@@ -1,22 +1,45 @@
 {
-  "name": "gulp-my-impl",
+  "name": "gulp-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend boilerplate based on gulp",
   "main": "index.js",
   "scripts": {
-    "dima-serve": "gulp default",
-    "dima-build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "mate-scripts init",
+    "start": "mate-scripts start",
+    "lint": "mate-scripts lint",
+    "test:only": "mate-scripts test",
+    "build": "mate-scripts build",
+    "deploy": "mate-scripts deploy",
+    "update": "mate-scripts update",
+    "postinstall": "npm run update",
+    "test": "npm run lint && npm run test:only"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [],
+  "author": "Mate Academy",
+  "license": "GPL-3.0",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-server-livereload": "^1.9.2",
-    "run-sequence": "^2.2.1"
-  }
+    "@linthtml/linthtml": "^0.8.3",
+    "@mate-academy/bemlint": "^0.1.1",
+    "@mate-academy/eslint-config": "*",
+    "@mate-academy/linthtml-config": "0.0.2",
+    "@mate-academy/scripts": "^0.2.0",
+    "@mate-academy/stylelint-config": "0.0.9",
+    "colors": "^1.3.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^9.0.1",
+    "gh-pages": "2.0.0",
+    "gulp-htmllint": "0.0.16",
+    "node-sass": "^4.14.1",
+    "parcel": "^1.12.4",
+    "stylelint": "^13.5.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-scss": "^3.17.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "mateAcademy": {
+    "projectType": "layout"
+  },
+  "dependencies": {}
 }
